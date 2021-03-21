@@ -94,6 +94,17 @@ static const struct dmi_system_id dmi_use_low_level_irq[] = {
 			DMI_MATCH(DMI_PRODUCT_VERSION, "1051L"),
 		},
 	},
+	{
+		/*
+		 * Lenovo Yoga Tab2 1051F, something messes with the home-button
+		 * IRQ settings, leading to a non working home-button.
+		 */
+		.matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "LENOVO"),
+			DMI_MATCH(DMI_PRODUCT_NAME, "60073"),
+			DMI_MATCH(DMI_PRODUCT_VERSION, "1051F"),
+		},
+	},
 	{} /* Terminating entry */
 };
 
